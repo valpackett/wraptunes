@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F15D18F15E91D5F00C30EB1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F15D18E15E91D5F00C30EB1 /* Cocoa.framework */; };
+		7F15D19915E91D5F00C30EB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F15D19715E91D5F00C30EB1 /* InfoPlist.strings */; };
+		7F15D19B15E91D5F00C30EB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F15D19A15E91D5F00C30EB1 /* main.m */; };
+		7F15D19F15E91D5F00C30EB1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7F15D19D15E91D5F00C30EB1 /* Credits.rtf */; };
+		7F15D1A215E91D5F00C30EB1 /* WTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F15D1A115E91D5F00C30EB1 /* WTAppDelegate.m */; };
+		7F15D1A515E91D5F00C30EB1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F15D1A315E91D5F00C30EB1 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7F15D18A15E91D5F00C30EB1 /* WrapTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WrapTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F15D18E15E91D5F00C30EB1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7F15D19115E91D5F00C30EB1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		7F15D19215E91D5F00C30EB1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7F15D19315E91D5F00C30EB1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7F15D19615E91D5F00C30EB1 /* WrapTunes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WrapTunes-Info.plist"; sourceTree = "<group>"; };
+		7F15D19815E91D5F00C30EB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7F15D19A15E91D5F00C30EB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7F15D19C15E91D5F00C30EB1 /* WrapTunes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WrapTunes-Prefix.pch"; sourceTree = "<group>"; };
+		7F15D19E15E91D5F00C30EB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		7F15D1A015E91D5F00C30EB1 /* WTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTAppDelegate.h; sourceTree = "<group>"; };
+		7F15D1A115E91D5F00C30EB1 /* WTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTAppDelegate.m; sourceTree = "<group>"; };
+		7F15D1A415E91D5F00C30EB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F15D18715E91D5F00C30EB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F15D18F15E91D5F00C30EB1 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F15D17F15E91D5E00C30EB1 = {
+			isa = PBXGroup;
+			children = (
+				7F15D19415E91D5F00C30EB1 /* WrapTunes */,
+				7F15D18D15E91D5F00C30EB1 /* Frameworks */,
+				7F15D18B15E91D5F00C30EB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7F15D18B15E91D5F00C30EB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F15D18A15E91D5F00C30EB1 /* WrapTunes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F15D18D15E91D5F00C30EB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F15D18E15E91D5F00C30EB1 /* Cocoa.framework */,
+				7F15D19015E91D5F00C30EB1 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F15D19015E91D5F00C30EB1 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F15D19115E91D5F00C30EB1 /* AppKit.framework */,
+				7F15D19215E91D5F00C30EB1 /* CoreData.framework */,
+				7F15D19315E91D5F00C30EB1 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		7F15D19415E91D5F00C30EB1 /* WrapTunes */ = {
+			isa = PBXGroup;
+			children = (
+				7F15D1A015E91D5F00C30EB1 /* WTAppDelegate.h */,
+				7F15D1A115E91D5F00C30EB1 /* WTAppDelegate.m */,
+				7F15D1A315E91D5F00C30EB1 /* MainMenu.xib */,
+				7F15D19515E91D5F00C30EB1 /* Supporting Files */,
+			);
+			path = WrapTunes;
+			sourceTree = "<group>";
+		};
+		7F15D19515E91D5F00C30EB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F15D19615E91D5F00C30EB1 /* WrapTunes-Info.plist */,
+				7F15D19715E91D5F00C30EB1 /* InfoPlist.strings */,
+				7F15D19A15E91D5F00C30EB1 /* main.m */,
+				7F15D19C15E91D5F00C30EB1 /* WrapTunes-Prefix.pch */,
+				7F15D19D15E91D5F00C30EB1 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F15D18915E91D5F00C30EB1 /* WrapTunes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F15D1A815E91D5F00C30EB1 /* Build configuration list for PBXNativeTarget "WrapTunes" */;
+			buildPhases = (
+				7F15D18615E91D5F00C30EB1 /* Sources */,
+				7F15D18715E91D5F00C30EB1 /* Frameworks */,
+				7F15D18815E91D5F00C30EB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WrapTunes;
+			productName = WrapTunes;
+			productReference = 7F15D18A15E91D5F00C30EB1 /* WrapTunes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F15D18115E91D5E00C30EB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WT;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "{ float:both }";
+			};
+			buildConfigurationList = 7F15D18415E91D5E00C30EB1 /* Build configuration list for PBXProject "WrapTunes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7F15D17F15E91D5E00C30EB1;
+			productRefGroup = 7F15D18B15E91D5F00C30EB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F15D18915E91D5F00C30EB1 /* WrapTunes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F15D18815E91D5F00C30EB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F15D19915E91D5F00C30EB1 /* InfoPlist.strings in Resources */,
+				7F15D19F15E91D5F00C30EB1 /* Credits.rtf in Resources */,
+				7F15D1A515E91D5F00C30EB1 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F15D18615E91D5F00C30EB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F15D19B15E91D5F00C30EB1 /* main.m in Sources */,
+				7F15D1A215E91D5F00C30EB1 /* WTAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7F15D19715E91D5F00C30EB1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F15D19815E91D5F00C30EB1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7F15D19D15E91D5F00C30EB1 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F15D19E15E91D5F00C30EB1 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		7F15D1A315E91D5F00C30EB1 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F15D1A415E91D5F00C30EB1 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F15D1A615E91D5F00C30EB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7F15D1A715E91D5F00C30EB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7F15D1A915E91D5F00C30EB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WrapTunes/WrapTunes-Prefix.pch";
+				INFOPLIST_FILE = "WrapTunes/WrapTunes-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7F15D1AA15E91D5F00C30EB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WrapTunes/WrapTunes-Prefix.pch";
+				INFOPLIST_FILE = "WrapTunes/WrapTunes-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F15D18415E91D5E00C30EB1 /* Build configuration list for PBXProject "WrapTunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F15D1A615E91D5F00C30EB1 /* Debug */,
+				7F15D1A715E91D5F00C30EB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F15D1A815E91D5F00C30EB1 /* Build configuration list for PBXNativeTarget "WrapTunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F15D1A915E91D5F00C30EB1 /* Debug */,
+				7F15D1AA15E91D5F00C30EB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F15D18115E91D5E00C30EB1 /* Project object */;
+}
