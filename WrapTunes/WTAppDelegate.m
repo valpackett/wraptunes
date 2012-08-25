@@ -35,4 +35,10 @@
     prevScript = @"Mu.Songbird.playPrev()";
 }
 
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
+{
+    [self.window makeKeyAndOrderFront:self];
+    return NO;
+}
+
 @end
