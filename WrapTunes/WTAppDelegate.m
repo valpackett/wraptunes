@@ -10,9 +10,29 @@
 
 @implementation WTAppDelegate
 
+- (void)playpause
+{
+    [scripter evaluateWebScript:playpauseScript];
+}
+
+- (void)next
+{
+    [scripter evaluateWebScript:nextScript];
+}
+
+- (void)prev
+{
+    [scripter evaluateWebScript:prevScript];
+}
+
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    [self.webview setMainFrameURL:@"http://music.yandex.ru"];
+    scripter = [self.webview windowScriptObject];
+    playpauseScript = @"Mu.Player.isPaused() ? Mu.Player.resume() : Mu.Player.pause()";
+    nextScript = @"Mu.Songbird.playNext()";
+    prevScript = @"Mu.Songbird.playPrev()";
 }
 
 @end
