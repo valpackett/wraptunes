@@ -18,6 +18,7 @@
 
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet WebView *webview;
+@property (assign) IBOutlet NSMenuItem *openitem;
 
 - (void)playpause;
 - (void)next;
