@@ -16,6 +16,7 @@
     NSString *prevScript;
     NSString *plistpath;
     NSArray *sites;
+    NSFileManager *fm;
 }
 
 @property (assign) IBOutlet NSWindow *window;

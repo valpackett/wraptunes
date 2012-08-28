@@ -54,11 +54,30 @@
     [self loadConfig];
 }
 
+- (IBAction)restoreConfig:(id)sender {
+    NSAlert *confirmation = [NSAlert new];
+    [confirmation setMessageText:@"Are you sure you want to restore the default list?"];
+    [confirmation setAlertStyle:NSWarningAlertStyle];
+    [confirmation addButtonWithTitle:@"OK"];
+    [confirmation addButtonWithTitle:@"Cancel"];
+    if ([confirmation runModal] == 1000) {
+        [self copyConfig];
+        NSAlert *success = [NSAlert new];
+        [success setMessageText:@"Done!"];
+        [success addButtonWithTitle:@"OK"];
+        [success runModal];
+    }
+}
+
+- (void)copyConfig {
+    [fm copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"DefaultSiteList" ofType:@"plist"] toPath:plistpath error:NULL];
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     plistpath = [@"~/.wraptunes.plist" stringByExpandingTildeInPath];
-    NSFileManager *fm = [NSFileManager new];
+    fm = [NSFileManager new];
     if (![fm fileExistsAtPath:plistpath]) {
-        [fm copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"DefaultSiteList" ofType:@"plist"] toPath:plistpath error:NULL];
+        [self copyConfig];
     }
     
     scripter = [self.webview windowScriptObject];
