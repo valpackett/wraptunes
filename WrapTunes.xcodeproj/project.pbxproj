@@ -16,6 +16,7 @@
 		7F15D1AC15E91DC500C30EB1 /* WrapTunes.icns in Resources */ = {isa = PBXBuildFile; fileRef = 7F15D1AB15E91DC500C30EB1 /* WrapTunes.icns */; };
 		7F15D1B215E9209D00C30EB1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F15D1B115E9209D00C30EB1 /* WebKit.framework */; };
 		7F15D1B615E92B8400C30EB1 /* WTApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F15D1B515E92B8400C30EB1 /* WTApplication.m */; };
+		7F6412A515ED2318007BDC93 /* DefaultSiteList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F6412A415ED2318007BDC93 /* DefaultSiteList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		7F15D1B115E9209D00C30EB1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		7F15D1B415E92B8400C30EB1 /* WTApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTApplication.h; sourceTree = "<group>"; };
 		7F15D1B515E92B8400C30EB1 /* WTApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTApplication.m; sourceTree = "<group>"; };
+		7F6412A415ED2318007BDC93 /* DefaultSiteList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultSiteList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				7F15D1A015E91D5F00C30EB1 /* WTAppDelegate.h */,
 				7F15D1A115E91D5F00C30EB1 /* WTAppDelegate.m */,
+				7F6412A415ED2318007BDC93 /* DefaultSiteList.plist */,
 				7F15D1B415E92B8400C30EB1 /* WTApplication.h */,
 				7F15D1B515E92B8400C30EB1 /* WTApplication.m */,
 				7F15D1A315E91D5F00C30EB1 /* MainMenu.xib */,
@@ -170,6 +173,7 @@
 				7F15D19F15E91D5F00C30EB1 /* Credits.rtf in Resources */,
 				7F15D1A515E91D5F00C30EB1 /* MainMenu.xib in Resources */,
 				7F15D1AC15E91DC500C30EB1 /* WrapTunes.icns in Resources */,
+				7F6412A515ED2318007BDC93 /* DefaultSiteList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

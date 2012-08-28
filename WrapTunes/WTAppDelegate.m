@@ -25,14 +25,50 @@
     [scripter evaluateWebScript:prevScript];
 }
 
+- (void)loadConfig
+{
+    NSArray *sites = [[NSArray alloc] initWithContentsOfFile:plistpath];
+    [sites enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL *stop) {
+        NSMenuItem *item = [NSMenuItem new];
+        [item setTitle:[obj valueForKey:@"name"]];
+        [item setTarget:self];
+        [item setAction:@selector(switchSiteAction:)];
+        [item setRepresentedObject:obj];
+        [self.sitesmenu addItem:item];
+    }];
+    [self switchSite:[sites objectAtIndex:0]];
+}
+
+- (IBAction)switchSiteAction:(id)sender {
+    [[self.sitesmenu itemArray] enumerateObjectsUsingBlock:^(NSMenuItem *obj, NSUInteger idx, BOOL *stop) {
+        [obj setState:NSOffState];
+    }];
+    [sender setState:NSOnState];
+    NSDictionary *site = [sender representedObject];
+    [self switchSite:site];
+}
+
+- (void)switchSite:(NSDictionary *)site
+{
+    playpauseScript = [site valueForKey:@"playpause"];
+    nextScript = [site valueForKey:@"next"];
+    prevScript = [site valueForKey:@"prev"];
+    [self.webview setMainFrameURL:[site valueForKey:@"url"]];
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    [self.webview setMainFrameURL:@"http://music.yandex.ru"];
+    plistpath = [@"~/.wraptunes.plist" stringByExpandingTildeInPath];
+    NSFileManager *fm = [NSFileManager new];
+    if (![fm fileExistsAtPath:plistpath]) {
+        [fm copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"DefaultSiteList" ofType:@"plist"] toPath:plistpath error:NULL];
+    }
+    
     scripter = [self.webview windowScriptObject];
-    playpauseScript = @"Mu.Player.isPaused() ? Mu.Player.resume() : Mu.Player.pause()";
-    nextScript = @"Mu.Songbird.playNext()";
-    prevScript = @"Mu.Songbird.playPrev()";
+    playpauseScript = @"";
+    nextScript = @"";
+    prevScript = @"";
+    [self loadConfig];
 }
 
 - (IBAction)openWindow:(id)sender {

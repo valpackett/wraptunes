@@ -612,7 +612,7 @@
 						<object class="NSMenu" key="NSSubmenu" id="835318025">
 							<string key="NSTitle">Window</string>
 							<array class="NSMutableArray" key="NSMenuItems">
-								<object class="NSMenuItem" id="373875878">
+								<object class="NSMenuItem" id="439577620">
 									<reference key="NSMenu" ref="835318025"/>
 									<string key="NSTitle">Open</string>
 									<string key="NSKeyEquiv">0</string>
@@ -661,6 +661,20 @@
 								</object>
 							</array>
 							<string key="NSName">_NSWindowsMenu</string>
+						</object>
+					</object>
+					<object class="NSMenuItem" id="178298731">
+						<reference key="NSMenu" ref="649796088"/>
+						<string key="NSTitle">Sites</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSKeyEquivModMask">1048576</int>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="35465992"/>
+						<reference key="NSMixedImage" ref="502551668"/>
+						<string key="NSAction">submenuAction:</string>
+						<object class="NSMenu" key="NSSubmenu" id="511291883">
+							<string key="NSTitle">Sites</string>
+							<array class="NSMutableArray" key="NSMenuItems"/>
 						</object>
 					</object>
 				</array>
@@ -1076,7 +1090,7 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">openitem</string>
 						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="373875878"/>
+						<reference key="destination" ref="439577620"/>
 					</object>
 					<int key="connectionID">549</int>
 				</object>
@@ -1084,9 +1098,17 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">openWindow:</string>
 						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="373875878"/>
+						<reference key="destination" ref="439577620"/>
 					</object>
 					<int key="connectionID">551</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">sitesmenu</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="511291883"/>
+					</object>
+					<int key="connectionID">562</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1123,6 +1145,7 @@
 							<reference ref="694149608"/>
 							<reference ref="952259628"/>
 							<reference ref="379814623"/>
+							<reference ref="178298731"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1404,7 +1427,7 @@
 							<reference ref="625202149"/>
 							<reference ref="575023229"/>
 							<reference ref="1011231497"/>
-							<reference ref="373875878"/>
+							<reference ref="439577620"/>
 						</array>
 						<reference key="parent" ref="713487014"/>
 					</object>
@@ -1693,8 +1716,22 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">548</int>
-						<reference key="object" ref="373875878"/>
+						<reference key="object" ref="439577620"/>
 						<reference key="parent" ref="835318025"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">557</int>
+						<reference key="object" ref="178298731"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="511291883"/>
+						</array>
+						<reference key="parent" ref="649796088"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">558</int>
+						<reference key="object" ref="511291883"/>
+						<array class="NSMutableArray" key="children"/>
+						<reference key="parent" ref="178298731"/>
 					</object>
 				</array>
 			</object>
@@ -1784,6 +1821,8 @@
 				<string key="543.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="544.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="548.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="557.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="558.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="56.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="57.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="58.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1796,7 +1835,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">551</int>
+			<int key="maxID">562</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1813,6 +1852,7 @@
 					<string key="superclassName">NSObject</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="openitem">NSMenuItem</string>
+						<string key="sitesmenu">NSMenu</string>
 						<string key="webview">WebView</string>
 						<string key="window">NSWindow</string>
 					</dictionary>
@@ -1820,6 +1860,10 @@
 						<object class="IBToOneOutletInfo" key="openitem">
 							<string key="name">openitem</string>
 							<string key="candidateClassName">NSMenuItem</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="sitesmenu">
+							<string key="name">sitesmenu</string>
+							<string key="candidateClassName">NSMenu</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="webview">
 							<string key="name">webview</string>

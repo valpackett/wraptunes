@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>url</key>
+		<string>http://prostopleer.com</string>
+		<key>name</key>
+		<string>Prostopleer</string>
+		<key>next</key>
+		<string>jQuery(&apos;#fw&apos;).click()</string>
+		<key>playpause</key>
+		<string>jQuery(&apos;#play&apos;).click()</string>
+		<key>prev</key>
+		<string>jQuery(&apos;#rw&apos;).click()</string>
+	</dict>
+	<dict>
+		<key>url</key>
+		<string>http://music.yandex.ru</string>
+		<key>name</key>
+		<string>Yandex.Music</string>
+		<key>next</key>
+		<string>Mu.Songbird.playNext()</string>
+		<key>playpause</key>
+		<string>Mu.Player.isPaused() ? Mu.Player.resume() : Mu.Player.pause()</string>
+		<key>prev</key>
+		<string>Mu.Songbird.playPrev()</string>
+	</dict>
+	<dict>
+		<key>url</key>
+		<string>http://grooveshark.com</string>
+		<key>name</key>
+		<string>Grooveshark</string>
+		<key>next</key>
+		<string>GS.player.nextSong()</string>
+		<key>playpause</key>
+		<string>GS.player.togglePlayPause()</string>
+		<key>prev</key>
+		<string>GS.player.previousSong()</string>
+	</dict>
+</array>
+</plist>
