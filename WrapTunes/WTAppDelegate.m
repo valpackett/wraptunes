@@ -3,7 +3,7 @@
 //  WrapTunes
 //
 //  Created by Greg V on 8/25/12.
-//  Copyright (c) 2012 { float:both }. All rights reserved.
+//  Copyright (c) 2012 { float:both }. No rights reserved.
 //
 
 #import "WTAppDelegate.h"
