@@ -34,7 +34,6 @@
     [self.webview setMainFrameURL:[site valueForKey:@"url"]];
 }
 
-
 - (void)copyConfig {
     [fm copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"DefaultSiteList" ofType:@"plist"] toPath:plistpath error:NULL];
 }
@@ -83,16 +82,12 @@
 /////// Implementation of protocols
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    scripter = [self.webview windowScriptObject];
     plistpath = [@"~/.wraptunes.plist" stringByExpandingTildeInPath];
     fm = [NSFileManager new];
     if (![fm fileExistsAtPath:plistpath]) {
         [self copyConfig];
     }
-    
-    scripter = [self.webview windowScriptObject];
-    playpauseScript = @"";
-    nextScript = @"";
-    prevScript = @"";
     [self loadConfig];
     [self switchSite:[sites objectAtIndex:0]];
 }
