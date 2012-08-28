@@ -27,6 +27,20 @@
     
 }
 
+- (void)switchSite:(NSDictionary *)site {
+    playpauseScript = [site valueForKey:@"playpause"];
+    nextScript = [site valueForKey:@"next"];
+    prevScript = [site valueForKey:@"prev"];
+    [self.webview setMainFrameURL:[site valueForKey:@"url"]];
+}
+
+
+- (void)copyConfig {
+    [fm copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"DefaultSiteList" ofType:@"plist"] toPath:plistpath error:NULL];
+}
+
+/////// Actions
+
 - (IBAction)switchSiteAction:(id)sender {
     [[self.sitesmenu itemArray] enumerateObjectsUsingBlock:^(NSMenuItem *obj, NSUInteger idx, BOOL *stop) {
         [obj setState:NSOffState];
@@ -34,13 +48,6 @@
     [sender setState:NSOnState];
     NSDictionary *site = [sender representedObject];
     [self switchSite:site];
-}
-
-- (void)switchSite:(NSDictionary *)site {
-    playpauseScript = [site valueForKey:@"playpause"];
-    nextScript = [site valueForKey:@"next"];
-    prevScript = [site valueForKey:@"prev"];
-    [self.webview setMainFrameURL:[site valueForKey:@"url"]];
 }
 
 - (IBAction)editConfig:(id)sender {
@@ -69,9 +76,11 @@
     }
 }
 
-- (void)copyConfig {
-    [fm copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"DefaultSiteList" ofType:@"plist"] toPath:plistpath error:NULL];
+- (IBAction)openWindow:(id)sender {
+    [self.window makeKeyAndOrderFront:self];
 }
+
+/////// Implementation of protocols
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     plistpath = [@"~/.wraptunes.plist" stringByExpandingTildeInPath];
@@ -86,10 +95,6 @@
     prevScript = @"";
     [self loadConfig];
     [self switchSite:[sites objectAtIndex:0]];
-}
-
-- (IBAction)openWindow:(id)sender {
-    [self.window makeKeyAndOrderFront:self];
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag {
