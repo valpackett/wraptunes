@@ -19,15 +19,13 @@
     [sites enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL *stop) {
         NSMenuItem *item = [NSMenuItem new];
         [item setTitle:[obj valueForKey:@"name"]];
-        [item setTarget:self];
-        [item setAction:@selector(switchSiteAction:)];
+        [item setAction:@selector(switchSite:)];
         [item setRepresentedObject:obj];
         [self.sitesmenu addItem:item];
     }];
-    
 }
 
-- (void)switchSite:(NSDictionary *)site {
+- (void)setSite:(NSDictionary *)site {
     playpauseScript = [site valueForKey:@"playpause"];
     nextScript = [site valueForKey:@"next"];
     prevScript = [site valueForKey:@"prev"];
@@ -40,13 +38,12 @@
 
 /////// Actions
 
-- (IBAction)switchSiteAction:(id)sender {
-    [[self.sitesmenu itemArray] enumerateObjectsUsingBlock:^(NSMenuItem *obj, NSUInteger idx, BOOL *stop) {
-        [obj setState:NSOffState];
+- (IBAction)switchSite:(id)sender {
+    [sites enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL *stop) {
+        [[self.sitesmenu itemWithTitle:[obj valueForKey:@"name"]] setState:NSOffState];
     }];
     [sender setState:NSOnState];
-    NSDictionary *site = [sender representedObject];
-    [self switchSite:site];
+    [self setSite:[sender representedObject]];
 }
 
 - (IBAction)editConfig:(id)sender {
@@ -89,7 +86,7 @@
         [self copyConfig];
     }
     [self loadConfig];
-    [self switchSite:[sites objectAtIndex:0]];
+    [self setSite:[sites objectAtIndex:0]];
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag {
