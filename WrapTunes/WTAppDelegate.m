@@ -10,23 +10,11 @@
 
 @implementation WTAppDelegate
 
-- (void)playpause
-{
-    [scripter evaluateWebScript:playpauseScript];
-}
+- (void)playpause { [scripter evaluateWebScript:playpauseScript]; }
+- (void)next { [scripter evaluateWebScript:nextScript]; }
+- (void)prev { [scripter evaluateWebScript:prevScript]; }
 
-- (void)next
-{
-    [scripter evaluateWebScript:nextScript];
-}
-
-- (void)prev
-{
-    [scripter evaluateWebScript:prevScript];
-}
-
-- (void)loadConfig
-{
+- (void)loadConfig {
     sites = [[NSArray alloc] initWithContentsOfFile:plistpath];
     [sites enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL *stop) {
         NSMenuItem *item = [NSMenuItem new];
@@ -48,8 +36,7 @@
     [self switchSite:site];
 }
 
-- (void)switchSite:(NSDictionary *)site
-{
+- (void)switchSite:(NSDictionary *)site {
     playpauseScript = [site valueForKey:@"playpause"];
     nextScript = [site valueForKey:@"next"];
     prevScript = [site valueForKey:@"prev"];
@@ -67,8 +54,7 @@
     [self loadConfig];
 }
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     plistpath = [@"~/.wraptunes.plist" stringByExpandingTildeInPath];
     NSFileManager *fm = [NSFileManager new];
     if (![fm fileExistsAtPath:plistpath]) {
@@ -87,8 +73,7 @@
     [self.window makeKeyAndOrderFront:self];
 }
 
-- (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
-{
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag {
     [self.window makeKeyAndOrderFront:self];
     return NO;
 }

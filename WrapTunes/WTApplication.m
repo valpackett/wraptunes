@@ -11,8 +11,7 @@
 
 @implementation WTApplication
 
-- (void)sendEvent:(NSEvent*)event
-{
+- (void)sendEvent:(NSEvent*)event {
 	if ([event type] == NSSystemDefined && [event subtype] == 8) {
 		int keyCode = (([event data1] & 0xFFFF0000) >> 16);
 		int keyFlags = ([event data1] & 0x0000FFFF);
@@ -25,8 +24,7 @@
 	[super sendEvent:event];
 }
 
-- (void)mediaKeyEvent:(int)key state:(BOOL)state repeat:(BOOL)repeat
-{
+- (void)mediaKeyEvent:(int)key state:(BOOL)state repeat:(BOOL)repeat {
     if (state == 0) {
         WTAppDelegate *delegate = [self delegate];
         switch (key) {
