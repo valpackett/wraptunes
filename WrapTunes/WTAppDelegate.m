@@ -27,7 +27,7 @@
 
 - (void)loadConfig
 {
-    NSArray *sites = [[NSArray alloc] initWithContentsOfFile:plistpath];
+    sites = [[NSArray alloc] initWithContentsOfFile:plistpath];
     [sites enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL *stop) {
         NSMenuItem *item = [NSMenuItem new];
         [item setTitle:[obj valueForKey:@"name"]];
@@ -36,7 +36,7 @@
         [item setRepresentedObject:obj];
         [self.sitesmenu addItem:item];
     }];
-    [self switchSite:[sites objectAtIndex:0]];
+    
 }
 
 - (IBAction)switchSiteAction:(id)sender {
@@ -56,6 +56,17 @@
     [self.webview setMainFrameURL:[site valueForKey:@"url"]];
 }
 
+- (IBAction)editConfig:(id)sender {
+    [[NSWorkspace sharedWorkspace] openFile:plistpath];
+}
+
+- (IBAction)reloadConfig:(id)sender {
+    [sites enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL *stop) {
+        [self.sitesmenu removeItem:[self.sitesmenu itemWithTitle:[obj valueForKey:@"name"]]];
+    }];
+    [self loadConfig];
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     plistpath = [@"~/.wraptunes.plist" stringByExpandingTildeInPath];
@@ -69,6 +80,7 @@
     nextScript = @"";
     prevScript = @"";
     [self loadConfig];
+    [self switchSite:[sites objectAtIndex:0]];
 }
 
 - (IBAction)openWindow:(id)sender {

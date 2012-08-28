@@ -15,6 +15,7 @@
     NSString *nextScript;
     NSString *prevScript;
     NSString *plistpath;
+    NSArray *sites;
 }
 
 @property (assign) IBOutlet NSWindow *window;
