@@ -58,12 +58,9 @@
 }
 
 - (IBAction)restoreConfig:(id)sender {
-    NSAlert *confirmation = [NSAlert new];
-    [confirmation setMessageText:@"Are you sure you want to restore the default list?"];
+    NSAlert *confirmation = [NSAlert alertWithMessageText:@"Are you sure you want to restore the default list?" defaultButton:@"OK" alternateButton:@"Cancel" otherButton:nil informativeTextWithFormat:@""];
     [confirmation setAlertStyle:NSWarningAlertStyle];
-    [confirmation addButtonWithTitle:@"OK"];
-    [confirmation addButtonWithTitle:@"Cancel"];
-    if ([confirmation runModal] == 1000) {
+    if ([confirmation runModal] == NSAlertDefaultReturn) {
         [self copyConfig];
         NSAlert *success = [NSAlert new];
         [success setMessageText:@"Done!"];
@@ -85,8 +82,7 @@
     NSTextField *input = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 300, 24)];
     [input setStringValue:[self.webview mainFrameURL]];
     [alert setAccessoryView:input];
-    NSInteger button = [alert runModal];
-    if (button == NSAlertDefaultReturn) {
+    if ([alert runModal] == NSAlertDefaultReturn) {
         [input validateEditing];
         [self.webview setMainFrameURL:[input stringValue]];
     }
