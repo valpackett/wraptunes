@@ -76,6 +76,10 @@
     [self.window makeKeyAndOrderFront:self];
 }
 
+- (IBAction)refreshWeb:(id)sender {
+    [self.webview reload:@""];
+}
+
 /////// Implementation of protocols
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
