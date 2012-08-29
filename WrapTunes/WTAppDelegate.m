@@ -80,6 +80,18 @@
     [self.webview reload:@""];
 }
 
+- (IBAction)changeURL:(id)sender {
+    NSAlert *alert = [NSAlert alertWithMessageText:@"Change the URL?" defaultButton:@"OK" alternateButton:@"Cancel" otherButton:nil informativeTextWithFormat:@""];
+    NSTextField *input = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 300, 24)];
+    [input setStringValue:[self.webview mainFrameURL]];
+    [alert setAccessoryView:input];
+    NSInteger button = [alert runModal];
+    if (button == NSAlertDefaultReturn) {
+        [input validateEditing];
+        [self.webview setMainFrameURL:[input stringValue]];
+    }
+}
+
 /////// Implementation of protocols
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
