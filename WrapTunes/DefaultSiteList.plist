@@ -4,6 +4,18 @@
 <array>
 	<dict>
 		<key>url</key>
+		<string>https://play.google.com/music/listen</string>
+		<key>name</key>
+		<string>Google Play Music</string>
+		<key>next</key>
+		<string>document.querySelector(&apos;button[data-id=&quot;forward&quot;]&apos;).click()</string>
+		<key>playpause</key>
+		<string>document.querySelector(&apos;button[data-id=&quot;play-pause&quot;]&apos;).click()</string>
+		<key>prev</key>
+		<string>document.querySelector(&apos;button[data-id=&quot;rewind&quot;]&apos;).click()</string>
+	</dict>
+	<dict>
+		<key>url</key>
 		<string>http://prostopleer.com</string>
 		<key>name</key>
 		<string>Prostopleer</string>
